@@ -29,7 +29,7 @@ return(
 )}
 
 export async function getServerSideProps(context) {
-const url = process.env.API_ENDPOINT + '/basic_student_info/student_edit';
+const url =  'http://64.227.138.229:4000/basic_student_info/student_edit';
 const res = await fetch(url, {method: 'POST', headers: {'Content-Type': 'application/json', 'Cookie':context.req.headers.cookie}});
 const forms = await res.json();
 return {
