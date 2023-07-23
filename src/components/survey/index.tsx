@@ -42,7 +42,7 @@ survey.onCurrentPageChanged.add(function(survey) {
 
 
 const saveSurvey = async ({formResults, backUrlLink}:SurveyResult) => {
-  const url =  'http://localhost:4000' + backUrlLink
+  const url =  'http://64.227.138.229:4000' + backUrlLink
   console.log(url)
   console.log(formResults)
   const res = await fetch(url, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(formResults)});
