@@ -29,7 +29,9 @@ return(
 )}
 
 export async function getServerSideProps(context) {
+console.log("inside getServerSideProps");
 const url =  'http://64.227.138.229:4000/basic_student_info/student_edit';
+console.log(url);
 const res = await fetch(url, {method: 'POST', headers: {'Content-Type': 'application/json', 'Cookie':context.req.headers.cookie}});
 const forms = await res.json();
 return {
