@@ -104,7 +104,7 @@ const  submit = async () => {
   const password = document.getElementById("password").value;
   const req_body = {"email": username, "password": password};
   console.log(req_body);
-  const url =  'http://localhost:4000/login';
+  const url =  'http://64.227.138.229:4000/login';
   console.log(url);
   const res = await fetch(url, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(req_body)});
   const user_details = await res.json();
