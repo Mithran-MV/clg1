@@ -29,9 +29,7 @@ return(
 )}
 
 export async function getServerSideProps(context) {
-console.log("inside getServerSideProps");
 const url =  'https://dev.teamvlog.in/basic_student_info/student_edit';
-console.log(url);
 const res = await fetch(url, {method: 'POST', headers: {'Content-Type': 'application/json', 'Cookie':context.req.headers.cookie}});
 const forms = await res.json();
 return {
